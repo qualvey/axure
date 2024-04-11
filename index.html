@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @media screen and (min-width: 1000px){
+            
+        
         body {
             margin: 0;
             padding: 0;
@@ -258,6 +261,87 @@
         .menu:hover ul {
             display: flex;
         }
+    }
+@media (max-width :999px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .top *{
+        text-decoration: none;
+    }
+        .index{
+            border: 1px solid red;
+            background-color: #0be7bb;
+            display: none;
+        }
+        .banner img{
+            display: none;
+        }
+
+        input{
+            margin-bottom: 0;
+            /* height: 100%; */
+            border: 1px solid gray;
+            border-radius: 3px 0 0 3px;
+            border-right: 0;
+    }
+        #inp:focus{ 
+           border: 2px solid green;
+           border-right: 0;
+            outline: 0px solid blue ;
+        }
+    .search{
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
+    .search button{
+        padding: 5px;
+        border: none;
+        background-color: green;
+        color: white;
+    }
+    .logo{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+    }
+    .logo img{ 
+        width: 70vw;
+        margin: 0 auto;
+    }
+    .banner>div:nth-of-type(1){
+        display: none;
+    }
+    .dengjinghu{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        align-items: center;
+    }
+    .dengjinghu h1{
+        color: red;
+        word-spacing: 2em;
+        letter-spacing: 2em;
+        padding-left: 2em;
+    }
+    .dengjinghu p{
+        margin-top: 20px;
+        text-indent: 2em;
+        border: 1px solid orange;
+        padding: 20px;
+        background-color: #0be7bb;
+        border-radius: 10px;
+    }
+    .banner>div:nth-of-type(3) *{
+        display: block;
+        width: 100%;
+    }
+    }
+
     </style>
 </head>
 
@@ -288,10 +372,11 @@
                 </a>
             </div>
         </div>
-        <div>
-            <input type="text" name="" id="">
+        <div class="search">
+            <input type="text" name="" id="inp">
+            <button>进入词条</button>
         </div>
-        <button>进入词条</button>
+        
     </div>
     <div class="index">
         <div>
