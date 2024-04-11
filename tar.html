@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./main.css">
+    <style>
+   * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative; /* 相对定位-父 */
+        }
+
+        .one li {
+            margin: 10px;
+        }
+
+        /* 隐藏二级菜单 */
+        .one ul {
+            position: absolute; /* 绝对定位-子 */
+            background: #CCCCCC;
+            display: none;
+        }
+
+        /* 鼠标悬停时显示二级菜单 */
+        .one li:hover ul {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>www</h1>
+    <section class="main">
+        <img src="./img/pic1.jpg" alt="">
+        <img src="./img/pic2.jpg" alt="">
+        <img src="./img/pic3.jpg" alt="">
+        <img src="./img/pic4.jpg" alt="">
+        <p>sss</p>
+    </section>
+    <ul class="one">
+        <li><a href="#">aaa</a>
+            <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </li>
+        <li><a href="#">bbb</a>
+            <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </li>
+        <li><a href="#">ccc</a>
+            <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </li>
+    </ul>
+</html>
