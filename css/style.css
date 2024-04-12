@@ -185,6 +185,10 @@ footer{
 .overlay-left {
     transform: translateY(-20%);
 }
+footer{
+    position: absolute;
+    bottom: 3vh;
+}
 
 /* Move signin to right */
 .dowebok.right-panel-active .sign-in-container {
