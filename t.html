@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Buttons with Checkmarks</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+.radio-group input[type="radio"] + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #aaa;
+  /* border-radius: 50%; */
+}
+
+.radio-group input[type="radio"]:checked + label:before {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: .4em;
+}
+
+.radio-group input[type="radio"]:checked + label:after {
+  content: '\2713'; /* Unicode checkmark symbol */
+  position: absolute;
+  left: 3px;
+  top: 1px;
+  color: #fff;
+  font-size: 12px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="radio-group">
+  <input type="radio" id="option1" name="options">
+  <label for="option1">Option 1</label><br>
+  
+  <input type="radio" id="option2" name="options">
+  <label for="option2">Option 2</label><br>
+  
+  <input type="radio" id="option3" name="options">
+  <label for="option3">Option 3</label><br>
+</div>
+
+
+<div class="birth">
+
+</div>
+
+<h2>请选择您的出生日期：</h2>
+
+<form>
+  <label for="birthdate">出生日期：</label>
+  <input type="date" id="birthdate" name="birthdate" placeholder="右侧按钮选择">
+  <!-- <input type="submit" value="提交"> -->
+  <input type="date" id="birthdate" name="birthdate" placeholder="">
+
+</form>
+</body>
+</html>
