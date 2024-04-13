@@ -3,74 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radio Buttons with Checkmarks</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-.radio-group input[type="radio"] {
-  display: none;
-}
-
-.radio-group input[type="radio"] + label {
-  position: relative;
-  padding-left: 25px;
-  cursor: pointer;
-}
-
-.radio-group input[type="radio"] + label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  border: 2px solid #aaa;
-  /* border-radius: 50%; */
-}
-
-.radio-group input[type="radio"]:checked + label:before {
-  background-color: #007bff;
-  border-color: #007bff;
-  border-radius: .4em;
-}
-
-.radio-group input[type="radio"]:checked + label:after {
-  content: '\2713'; /* Unicode checkmark symbol */
-  position: absolute;
-  left: 3px;
-  top: 1px;
-  color: #fff;
-  font-size: 12px;
-}
-
-</style>
+<title>Ant Design DatePicker Example</title>
+<!-- 引入 Ant Design 样式文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd/dist/antd.css">
 </head>
 <body>
 
-<div class="radio-group">
-  <input type="radio" id="option1" name="options">
-  <label for="option1">Option 1</label><br>
-  
-  <input type="radio" id="option2" name="options">
-  <label for="option2">Option 2</label><br>
-  
-  <input type="radio" id="option3" name="options">
-  <label for="option3">Option 3</label><br>
-</div>
-
-
-<div class="birth">
-
-</div>
-
 <h2>请选择您的出生日期：</h2>
 
-<form>
-  <label for="birthdate">出生日期：</label>
-  <input type="date" id="birthdate" name="birthdate" placeholder="右侧按钮选择">
-  <!-- <input type="submit" value="提交"> -->
-  <input type="date" id="birthdate" name="birthdate" placeholder="">
-</form>
+<!-- Ant Design DatePicker 示例 -->
+<div id="datepicker-container"></div>
+
+<!-- 引入 Ant Design JS 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/antd/dist/antd.js"></script>
+<!-- 引入 React 和 ReactDOM，这里使用了 Babel CDN 以支持 JSX 语法 -->
+<script src="https://cdn.jsdelivr.net/npm/react/umd/react.development.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.development.js"></script>
+
+<!-- 在这里编写 JavaScript 代码，创建 Ant Design DatePicker -->
+<script>
+  const { DatePicker, Space } = antd;
+
+  const onChange = (date, dateString) => {
+    console.log(date, dateString);
+  };
+
+  ReactDOM.render(
+    <Space direction="vertical">
+      <DatePicker onChange={onChange} />
+      <DatePicker onChange={onChange} picker="week" />
+      <DatePicker onChange={onChange} picker="month" />
+      <DatePicker onChange={onChange} picker="quarter" />
+      <DatePicker onChange={onChange} picker="year" />
+    </Space>,
+    document.getElementById('datepicker-container')
+  );
+</script>
 
 </body>
 </html>
